@@ -1,0 +1,58 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+left to right direction
+skinparam BackgroundColor DarkKhaki
+skinparam usecase{
+BackgroundColor DarkSeaGreen
+ArrowColor Brown
+ActorBorderColor Black
+
+}
+skinparam rectangle{
+BackgroundColor SlateGrey
+
+
+}
+
+
+actor "Player" as p
+actor "Main UI" as ui
+'skinparam linetype polyline
+rectangle "Game Portal" {
+  usecase "Play Game 1" as game1
+  usecase "Play Game 2" as game2
+  usecase "Play Game 3" as game3
+  usecase "Submit Name" as sub_name
+  usecase "End Game" as end
+together{
+  usecase "Display Score Totals" as display
+  usecase "Exit Portal" as exit
+  usecase "Choose  Game" as choose
+  }
+}
+
+'Player UseCases
+p -- sub_name
+p -- choose
+p -- game1
+p -- game2
+p -- game3
+
+' Main UI Usecases
+sub_name -- ui
+choose --- ui
+display --- ui
+
+'Extends & includes
+exit .> display :Include
+game1 ..> end :Include
+game2 ..> end :Include
+game3 ..> end :Include
+
+end ..> exit :Extend
+end ..> choose :Extend
+
+@enduml
+
+

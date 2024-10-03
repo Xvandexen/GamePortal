@@ -1,0 +1,30 @@
+# GamePortal
+
+### Requirements
+The Application must:
+- Welcome the player, then offer the player a choice of games to play
+- Store the player's stats for each game as they play the games
+- Let the player choose, and play, a dice game
+- When the player has finished playing a game, offer them the chance to play another game (same or different game)
+- Keep offering the choice to play again until they choose to exit the portal
+- When they choose to exit the portal, tell them their scores for the whole visit
+
+
+
+### Usecase Diagram
+While I did have Some issues with suggested usecase Diagram, they were minor and so most of the changes were aesthetic.  
+
+<tabs>
+<tab title="Original">
+<img src="OriginalUseCase.png" alt="ImageNotAvailable"/>
+</tab>
+<tab title="Reformated Original">
+<code-block lang="plantuml" src="Game_Portal_UC.puml"></code-block>
+</tab>
+<tab title="Updated">
+<code-block lang="plantuml" src="Updated_Game_Portal_UC.puml"></code-block>
+</tab>
+<tab title="Experimental">
+<code-block lang="plantuml" src="Experimental_Game_Portal_UC.puml"></code-block>
+</tab>
+</tabs>
