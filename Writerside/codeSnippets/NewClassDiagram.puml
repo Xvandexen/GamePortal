@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/class-diagram
+title "Game Portal"
+skinparam backgroundcolor DimGrey
+skinparam TitleFontColor GoldenRod
+skinparam TitleFontSize 18
+skinparam class{
+ArrowColor CadetBlue
+backgroundcolor khaki
+
+}
+class "Main" as m{
+
+}
+class "GamePortalController" as cont{
+}
+class "Player" as p{
+- name: string
+- scoreGame1: int
+- scoreGame2: int
+- scoreGame3: int
+
+}
+class "Dice" as die{
+- faces: list of int
+- test
++ rollDice(): Int
+}
+class "DiceGame1" as g1{
+}
+class "DiceGame2" as g2{
+}
+class "DiceGame3" as g3{
+}
+
+cont -- p
+cont -- m
+cont -- g1
+cont -- g2
+cont -- g3
+
+g1 -- die
+g2 -- die
+g3 -- die
+
+
+
+@enduml

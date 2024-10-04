@@ -13,7 +13,9 @@ The Application must:
 
 ### Usecase Diagram
 While I did have Some issues with suggested usecase Diagram, they were minor and so most of the changes were aesthetic.  
-
+I also Attempted created an alternative experimental That I think is more readable, but I'm unsure how valid it is.
+<procedure>
+<title>Diagram</title>
 <tabs>
 <tab title="Original">
 <img src="OriginalUseCase.png" alt="ImageNotAvailable"/>
@@ -28,3 +30,24 @@ While I did have Some issues with suggested usecase Diagram, they were minor and
 <code-block lang="plantuml" src="Experimental_Game_Portal_UC.puml"></code-block>
 </tab>
 </tabs>
+</procedure>
+
+### Class Diagram
+
+<procedure>
+<title>Diagram</title>
+<tabs>
+<tab title="Original">
+<img src="OriginalClassDiagram.png" alt="ImageNotAvailable"/>
+</tab>
+<tab title="Reformated Original">
+<code-block lang="plantuml" src="OriginalClassDiagram.puml"></code-block>
+</tab>
+<tab title="Updated">
+<code-block lang="plantuml" src="Updated_Game_Portal_UC.puml"></code-block>
+</tab>
+<tab title="Experimental">
+<code-block lang="plantuml" src="Experimental_Game_Portal_UC.puml"></code-block>
+</tab>
+</tabs>
+</procedure>
