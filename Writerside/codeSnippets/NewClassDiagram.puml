@@ -4,45 +4,77 @@ title "Game Portal"
 skinparam backgroundcolor DimGrey
 skinparam TitleFontColor GoldenRod
 skinparam TitleFontSize 18
+skinparam groupInheritance 4
+
+
+
 skinparam class{
 ArrowColor CadetBlue
 backgroundcolor khaki
 
 }
-class "Main" as m{
+
+enum Game{
+GAMEONE
+GAMETWO
+GAMETHREE
 
 }
-class "GamePortalController" as cont{
+class "Main" as m{
+- Start GamePortalController()
 }
+
+class "GamePortalController" as cont{
+- currentgame
++ startGame(): bool
++ displayScores(): bool
+}
+
 class "Player" as p{
 - name: string
 - scoreGame1: int
 - scoreGame2: int
 - scoreGame3: int
-
 }
+
 class "Dice" as die{
 - faces: list of int
-- test
+- rng: Random
 + rollDice(): Int
 }
+abstract class "DiceGame" as g{
+- dice: list of Dice
++ StartGame():
+}
+note left of g::Dice
+This accounts for games
+with multiple dice.
+end note
+
 class "DiceGame1" as g1{
+- gameLogic():
+
 }
 class "DiceGame2" as g2{
+- gameLogic():
+
 }
 class "DiceGame3" as g3{
+- gameLogic():
 }
 
+g <|-- g1
+g <|-- g2
+g <|-- g3
+
+cont -- Game
 cont -- p
 cont -- m
 cont -- g1
 cont -- g2
 cont -- g3
 
-g1 -- die
-g2 -- die
-g3 -- die
-
+g -- die
 
 
 @enduml

@@ -33,9 +33,11 @@ I also Attempted created an alternative experimental That I think is more readab
 </procedure>
 
 ### Class Diagram
+#### Key
+<img src="Key.png" alt="ImageNotAvailable.png" style="block"/>
+These Icons represent the visibility of the methods and attributes on the class diagram.
 
-<procedure>
-<title>Diagram</title>
+#### Diagram
 <tabs>
 <tab title="Original">
 <img src="OriginalClassDiagram.png" alt="ImageNotAvailable"/>
@@ -44,10 +46,6 @@ I also Attempted created an alternative experimental That I think is more readab
 <code-block lang="plantuml" src="OriginalClassDiagram.puml"></code-block>
 </tab>
 <tab title="Updated">
-<code-block lang="plantuml" src="Updated_Game_Portal_UC.puml"></code-block>
-</tab>
-<tab title="Experimental">
-<code-block lang="plantuml" src="Experimental_Game_Portal_UC.puml"></code-block>
+<code-block lang="plantuml" src="NewClassDiagram.puml"></code-block>
 </tab>
 </tabs>
-</procedure>
