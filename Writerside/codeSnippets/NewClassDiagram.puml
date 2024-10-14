@@ -26,8 +26,9 @@ class "Main" as m{
 
 class "GamePortalController" as cont{
 - currentgame
-+ startGame(): bool
++ startGame(chosenGame: Game): bool
 + displayScores(): bool
++ exit(): bool
 }
 
 class "Player" as p{
@@ -35,6 +36,7 @@ class "Player" as p{
 - scoreGame1: int
 - scoreGame2: int
 - scoreGame3: int
+
 }
 
 class "Dice" as die{
@@ -44,6 +46,7 @@ class "Dice" as die{
 }
 abstract class "DiceGame" as g{
 - dice: list of Dice
+- score: int
 + StartGame():
 }
 note left of g::Dice
@@ -68,13 +71,13 @@ g <|-- g2
 g <|-- g3
 
 cont -- Game
-cont -- p
-cont -- m
+cont "1"<-->"1" p
+cont "1"--"1" m
 cont -- g1
 cont -- g2
 cont -- g3
 
-g -- die
+g "n" <-- "0" die
 
 
 @enduml
